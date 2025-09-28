@@ -4,9 +4,10 @@ import { AppService } from './app.service';
 import { JwtModule } from './jwt/jwt.module';
 import { SharedModule } from './shared/shared.module';
 import { PrismaModule } from './prisma/prisma.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [JwtModule, SharedModule, PrismaModule],
+  imports: [JwtModule, SharedModule, PrismaModule, AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })
